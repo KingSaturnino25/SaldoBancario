@@ -53,13 +53,16 @@ class ContaBancaria
             contaJoao.ExibirSaldo();
 
             // Criando uma nova conta bancária para Maria com saldo inicial de 2000
+            // Tipo por valor
             ContaBancaria contaMaria = new ContaBancaria("Maria", 2000);
 
             // Transferindo 300 da conta de Maria para a conta de João
+            // Tipo por valor
             contaMaria.Sacar(300);
             contaJoao.Depositar(300);
 
             // Exibindo os saldos atualizados das contas
+            // Tipo por referência
             contaJoao.ExibirSaldo();
             contaMaria.ExibirSaldo();
 
