@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SaldoBancario
 {
-    class Program
+    class Program { }
 
 class ContaBancaria
     {
@@ -40,7 +40,7 @@ class ContaBancaria
         }
     }
 
-    class Program
+    class Program 
     {
         static void Main(string[] args)
         {
@@ -52,21 +52,20 @@ class ContaBancaria
             contaJoao.Sacar(200);
             contaJoao.ExibirSaldo();
 
-
-        }
-    }
-
-    class Program 
-    {
-        static void Main(string[] args)
-        {
+            // Criando uma nova conta bancária para Maria com saldo inicial de 2000
             ContaBancaria contaMaria = new ContaBancaria("Maria", 2000);
 
-            ContaBancaria contaJoao = new ContaBancaria("Joao", 1000);
+            // Transferindo 300 da conta de Maria para a conta de João
+            contaMaria.Sacar(300);
+            contaJoao.Depositar(300);
 
-            contaMaria.Transferir(contaJoao, 300);
-
-            contaMaria.ExibirSaldo();
+            // Exibindo os saldos atualizados das contas
             contaJoao.ExibirSaldo();
+            contaMaria.ExibirSaldo();
+
+            }
         }
     }
+
+
+    
